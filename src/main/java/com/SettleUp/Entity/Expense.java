@@ -20,7 +20,7 @@ public class Expense extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "paid_by")
-    private User paidBy;
+    private Users paidBy;
 
     @ManyToOne
     @JoinColumn(name = "group_id")
@@ -59,10 +59,10 @@ public class Expense extends BaseEntity {
     	this.expenseDate = expenseDate; 
     	}
 
-    public User getPaidBy() {
+    public Users getPaidBy() {
     	return paidBy;
     	}
-    public void setPaidBy(User paidBy) {
+    public void setPaidBy(Users paidBy) {
     	this.paidBy = paidBy;
     	}
 

@@ -15,7 +15,7 @@ public class Category extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "created_by")
-    private User createdBy;
+    private Users createdBy;
 
     // Getters & Setters
     public String getName() { 
@@ -32,10 +32,10 @@ public class Category extends BaseEntity {
     	this.group = group; 
     	}
 
-    public User getCreatedBy() { 
+    public Users getCreatedBy() { 
     	return createdBy; 
     	}
-    public void setCreatedBy(User createdBy) { 
+    public void setCreatedBy(Users createdBy) { 
     	this.createdBy = createdBy;
     	}
 }

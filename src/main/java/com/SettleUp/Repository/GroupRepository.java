@@ -1,5 +1,9 @@
 package com.SettleUp.Repository;
 
-public class GroupRepository {
 
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.SettleUp.Entity.Group;
+
+public interface GroupRepository extends JpaRepository<Group, Long> {
 }

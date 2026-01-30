@@ -1,8 +1,17 @@
 package com.SettleUp.Entity;
 
-import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "groups")
@@ -15,7 +24,7 @@ public class Group extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "created_by")
-    private User createdBy;
+    private Users createdBy;
 
     @ManyToMany
     @JoinTable(
@@ -23,7 +32,7 @@ public class Group extends BaseEntity {
             joinColumns = @JoinColumn(name = "group_id"),
             inverseJoinColumns = @JoinColumn(name = "user_id")
     )
-    private Set<User> members = new HashSet<>();
+    private Set<Users> members = new HashSet<>();
 
     @OneToMany(mappedBy = "group", cascade = CascadeType.ALL)
     private Set<Expense> expenses = new HashSet<>();
@@ -35,11 +44,11 @@ public class Group extends BaseEntity {
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
 
-    public User getCreatedBy() { return createdBy; }
-    public void setCreatedBy(User createdBy) { this.createdBy = createdBy; }
+    public Users getCreatedBy() { return createdBy; }
+    public void setCreatedBy(Users createdBy) { this.createdBy = createdBy; }
 
-    public Set<User> getMembers() { return members; }
-    public void setMembers(Set<User> members) { this.members = members; }
+    public Set<Users> getMembers() { return members; }
+    public void setMembers(Set<Users> members) { this.members = members; }
 
     public Set<Expense> getExpenses() { return expenses; }
     public void setExpenses(Set<Expense> expenses) { this.expenses = expenses; }
