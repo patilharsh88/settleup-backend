@@ -31,7 +31,7 @@ public class CategoryController {
         return ResponseEntity.ok(categoryService.createCategory(category, groupId, userId));
     }
 
-    @GetMapping
+    @GetMapping("allCategory")
     public ResponseEntity<List<Category>> getAllCategories(){
         return ResponseEntity.ok(categoryService.getAllCategories());
     }
