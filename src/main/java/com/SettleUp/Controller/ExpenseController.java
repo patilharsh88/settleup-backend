@@ -27,10 +27,7 @@ public class ExpenseController {
     }
 
     @PostMapping("/{paidById}/{groupId}/{categoryId}")
-    public ResponseEntity<Expense> createExpense(@RequestBody Expense expense,
-                                                 @PathVariable Long paidById,
-                                                 @PathVariable Long groupId,
-                                                 @PathVariable Long categoryId){
+    public ResponseEntity<Expense> createExpense(@RequestBody Expense expense,@PathVariable Long paidById,@PathVariable Long groupId,@PathVariable Long categoryId){
         return ResponseEntity.ok(expenseService.createExpense(expense, paidById, groupId, categoryId));
     }
 
