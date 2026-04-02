@@ -1,5 +1,5 @@
-package com.SettleUp.Exception;
+spackage com.SettleUp.Exception;
 
-public class GlobalExceptionHandler {
+public class GlobalExceptionHandler extends RuntimeException{
 
 }
