@@ -43,7 +43,7 @@ This project follows a simple layered architecture using Spring Boot, Spring Dat
 
 # Technologies Used
 
-* Java 17+
+* Java 8
 * Spring Boot
 * Spring Web
 * Spring Data JPA
@@ -259,7 +259,7 @@ The application throws `RuntimeException` when:
 
 # Author
 
-**Name:** Your Name
+**Name:** Harshwardhan Patil
 
 **Project:** SettleUp - Expense Sharing Management System
 
